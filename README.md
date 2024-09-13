@@ -1,5 +1,5 @@
-#
-Link to backend: https://github.com/602822/dat250PollApplication
+# Link to backend: 
+https://github.com/602822/dat250PollApplication
 
 
 # Svelte + Vite
