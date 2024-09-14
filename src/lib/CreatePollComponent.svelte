@@ -3,13 +3,13 @@
     let hoursValid;
     let voteOption;
     let voteOptions = [];
-    let presentationOrder = 0;
+    let presentationOrder = 1;
 
 
 
     function addVoteOption() {
         voteOptions.push({caption: voteOption, presentationOrder: presentationOrder++});
-        alert("VoteOption: " + voteOption + "added")
+        alert("VoteOption: " + voteOption + " added at " + presentationOrder)
         voteOption = "";
     }
 
