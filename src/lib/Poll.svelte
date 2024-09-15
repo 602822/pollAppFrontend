@@ -70,20 +70,64 @@
 
 <style>
 
+    button.upvote {
+        background-color: green;
+        color: white;
+        border: solid black 2px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: Arial, serif;
+    }
+
+    button.downvote {
+        background-color: red;
+        color: white;
+        border: solid black 2px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: Arial, serif;
+    }
+
+    span.voteText {
+        font-family: Arial, serif;
+        font-size: 16px;
+        color: blue;
+        font-weight: bold;
+
+    }
+
+    span.voteCaption {
+        font-family: Arial, serif;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    h2.pollQuestion {
+        font-family: Arial, serif;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li.vote {
+        margin: 10px;
+        padding: 5px;
+    }
+
 
 </style>
 
 <div>
 
-    <h2>{poll.question}</h2>
-
+    <h2 class="pollQuestion">{poll.question}</h2>
     <ul>
         {#each poll.options as voteoption}
-            <li>
-                {voteoption.caption}
-                <button on:click={() => upVote(voteoption, poll, index)}>Upvote</button>
-                <button on:click={() => downVote(voteoption.presentationOrder, index, poll)}>Downvote</button>
-                Votes: {voteoption.numberOfVotes}
+            <li class="vote">
+               <span class="voteCaption"> {voteoption.caption} </span>
+                <button class="upvote" on:click={() => upVote(voteoption, poll, index)}>Upvote</button>
+                <button class="downvote" on:click={() => downVote(voteoption.presentationOrder, index, poll)}>Downvote</button>
+              <span class="voteText"> Votes: {voteoption.numberOfVotes} </span>
             </li>
         {/each}
     </ul>

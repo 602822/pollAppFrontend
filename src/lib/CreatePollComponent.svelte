@@ -4,8 +4,6 @@
     let voteOption;
     let voteOptions = [];
     let presentationOrder = 1;
-    export let username;
-
 
 
     function addVoteOption() {

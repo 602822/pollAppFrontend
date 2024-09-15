@@ -32,6 +32,22 @@
 
 <style>
 
+    div.container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    h2.info {
+        font-family: Arial, serif;
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+
+
 </style>
 
 
@@ -40,8 +56,10 @@
 {:else if !result}
     <p>Loading polls......</p>
 {:else}
-    <h1>Polls will update every 5 seconds</h1>
+    <div class="container">
+    <h2 class="info">Polls will update every 5 seconds</h2>
     {#each result as poll, index}
         <Poll {poll} {username} {index}/>
     {/each}
+    </div>
 {/if}
