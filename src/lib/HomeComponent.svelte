@@ -14,5 +14,5 @@ div {
 
 <div>
     <h1>Welcome!</h1>
-    <h2> Available endpoints: /users and /polls</h2>
+    <h2> Available endpoints: /users and /polls/:username and /polls/:username/votes</h2>
 </div>

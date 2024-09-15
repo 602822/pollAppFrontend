@@ -4,12 +4,13 @@
     let voteOption;
     let voteOptions = [];
     let presentationOrder = 1;
+    export let username;
 
 
 
     function addVoteOption() {
         voteOptions.push({caption: voteOption, presentationOrder: presentationOrder++});
-        alert("VoteOption: " + voteOption + " added at " + presentationOrder)
+        alert("VoteOption: " + voteOption + " added")
         voteOption = "";
     }
 
