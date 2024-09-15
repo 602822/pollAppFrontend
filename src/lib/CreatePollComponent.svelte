@@ -26,6 +26,7 @@
             if (response.status === 201) {
                 question = "";
                 hoursValid = "";
+                voteOptions = [];
             }
         }).catch((error) => {
             alert(error.message)
